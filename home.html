@@ -26,7 +26,7 @@
         <link rel="shortcut icon" href="images/favicon.ico">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/home.css">
 
     </head>
     <body>
@@ -38,8 +38,15 @@
                     </div>
                 </a>
 
+                <!--Hamburger button for mobile-->
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
                 <nav>
-                    <ul>
+                    <ul class="nav-links">
                         <li><a href="home.html">Home</a></li>
                         <li><a href="about.html">About me</a></li>
                     </ul>
@@ -136,5 +143,15 @@
                 <p>Copyright &copy; 2024 </p>
                 </div>
                 </footer>
+
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active')
+            });
+        </script>
     </body>
 </html>
