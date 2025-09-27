@@ -30,22 +30,28 @@
     </head>
     <body>
         <header>
+                <a href="index.html" class="logo-link">
+                    <div class="logo">
+                        <img class="icon" src="./images/logo.png" alt="Logo">
+                        <h1>My learning journal</h1>
+                    </div>
+                </a>
 
-            <a href="index.html" class="logo-link">
-                <div class="logo">
-                    <img class="icon" src="./images/logo.png" alt="Logo">
-                    <h1>My learning journal</h1>
-                </div>
-            </a>
+                <!--Hamburger button for mobile-->
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
 
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">About me</a></li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About me</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-        </header>
         <main >
             <section class="hero-container">
                 <img src="./images/image_5.png" alt="Hero image">
@@ -114,5 +120,15 @@
                 </div>
             </footer>
         </main>
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active')
+            });
+        </script>
+
     </body>
 </html>
