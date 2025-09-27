@@ -1,0 +1,151 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    background-color: #fbfbfbf6;
+}
+
+/*Navbar*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    background-color: #ffffff;
+}
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link:hover, ul li a:hover {
+    color: #675656;
+}
+
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.logo img{
+    width: 1.5em;
+    margin-right: 0.5em;
+}
+
+.logo h1 {
+    font-size: 1rem;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 1em;
+}
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/*Hero section*/
+.hero-container {
+    position: relative;
+}
+.hero-container img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center 80%;
+    display: block;
+}
+.hero-post {
+    position: absolute;
+    top: 50%;
+    left: 2em;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.hero-container h1 {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+.hero-container p {
+    width: 90%;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.blog-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+    margin: 1.5em;
+}
+
+.blog {
+    background-color: #fbfbfbf6;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: left;
+    margin-top: 2.5em;
+}
+
+.blog-container img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.blog p, h2 {
+    text-align: start;
+}
+
+.foota {
+    background-color: rgb(21, 21, 21);
+    margin-top: 5em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    line-height: 1.5;
+    height: 7em;
+}
+
+.foota h3 {
+    margin-bottom: 0;
+}
+
+.foota p {
+    margin-top: 0;
+}
+
+@media (min-height: 768px) {
+    .blog-container {
+        grid-template-columns: repeat(2, 1fr )
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-container h1 {
+        font-size: 2.5em;
+    }
+    .hero-container p{
+        max-width: 700px;
+    }
+    .hero-post {
+    position: absolute;
+    top: 70%;
+    left: 2em;
+
+    
+}
+    .blog-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

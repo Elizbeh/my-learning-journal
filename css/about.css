@@ -1,0 +1,196 @@
+/* ========== Global Reset & Base Styles ========== */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    background-color: #fbfbfbf6; /* light background */
+}
+
+/* ========== Navbar ========== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    background-color: #ffffff;
+}
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; /* inherit text color */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 1.5em;
+    margin-right: 0.5em;
+}
+.logo h1 {
+    font-size: 1rem;
+    margin: 0; /* remove default h1 margin */
+}
+
+/* Navigation links */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.logo-link:hover,
+nav ul li a:hover {
+    color: gray; /* hover effect */
+}
+
+/* ========== About Section ========== */
+.about-content,
+.preview {
+    display: grid;
+    grid-template-columns: 1fr; /* stack vertically on mobile */
+    margin: 1.5em;
+    margin-top: 5em;
+    gap: 1em;
+}
+
+/* Profile image */
+.about-content img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+/* About title */
+.about-title {
+    margin-top: 0.5em;
+    margin-bottom: 0; /* remove auto bottom margin */
+    font-size: 1.5rem;
+}
+
+/* Subtitle under title */
+.about-subtitle {
+    line-height: 1.5;
+    margin: 0.5em 0;
+}
+
+/* Long preview text */
+.preview {
+    line-height: 1.6;
+}
+
+.commit,
+.started {
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+.started {
+    margin-top: 1.5em;
+}
+
+/* ========== Recent Posts Grid ========== */
+.recent-posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em 0.5em; /* row-gap 1em, col-gap 0.5em */
+    margin: 2em 1.5em;
+}
+
+.post-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    margin-top: 2.5em;
+}
+
+.post-card h2 {
+    margin: 0.5em 0;
+}
+.post-card p {
+    line-height: 1.4;
+}
+
+/* ========== Footer ========== */
+footer {
+    background-color: rgb(21, 21, 21);
+    margin-top: 5em;
+    padding: 2em 1em;
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+}
+
+/* ========== Responsive Layouts ========== */
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    header {
+        padding: 2em 4em;
+    }
+    .about-content {
+        grid-template-columns: 200px 1fr; /* profile image + text */
+        grid-template-areas:
+            "image title"
+            "image subtitle"
+            "image preview";
+        gap: 1em 5em; /* row-gap 1em, col-gap 5em */
+        text-align: left;
+    }  
+    
+    .about-content img {
+        grid-area: image;
+        margin: 0;
+        width: 160px;
+    }
+
+    .about-title {
+        grid-area: title;
+        font-size: 2.5rem;
+    }
+
+    .about-subtitle {
+        grid-area: subtitle;
+        font-size: 1em;
+    }
+
+    .preview {
+        grid-area: preview;
+        margin-top: 1em;
+    }
+
+    .recent-posts {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+    .about-content {
+        padding-top: 5em;
+    }
+    .about-intro,
+    .recent-posts {
+        margin: 3em;
+    }
+    .about-content img {
+        width: 250px; /* larger profile image */
+    }
+
+    .recent-posts {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+    .preview {
+        margin-top: 5em;
+    }
+}

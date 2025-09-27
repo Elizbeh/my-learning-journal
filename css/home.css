@@ -1,0 +1,132 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    background-color: #fbfbfbf6;;
+    
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    background-color: #ffffff;
+}
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 1.5em;
+    margin-right: 0.5em;
+}
+.logo h1 {
+    font-size: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.logo-link:hover, nav ul li a:hover {
+    color: gray;
+}
+.post-featured {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    margin: 1.5em;
+    margin-top: 3em;
+}
+.post-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    margin: 1.5em
+}
+
+/* Featured Post */
+.post-container h2 {
+    text-align: center;
+}
+.post-featured__image {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    object-position: center 80%;
+    border-radius: 5px;
+    margin-top: 3em;
+}
+.post-featured p {
+    line-height: 1.5;
+}
+.commit, .started {
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+.started {
+    margin-top: 1.5em;
+}
+
+/* Recent Posts Grid */
+.recent-posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+.post-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    margin-top: 2em;
+}
+.post-card h2 {
+    margin: 0.5em 0;
+    text-align: left;
+}
+.post-card p {
+    line-height: 1.4;
+}
+
+
+/* Footer */
+footer {
+    background-color: rgb(21, 21, 21);
+    margin-top: 5em;
+    padding: 2em 1em;
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) {
+    .recent-posts {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+@media (min-width: 1024px) {
+    .recent-posts {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    }
+}
